@@ -1,47 +1,46 @@
+<div class="section section-contacts">
+  <div class="row">
+    <div class="col-md-8 ml-auto mr-auto">
+      <h2 class="text-center title">Contact Us</h2>
+      <h3 class="text-center   ">
+        Research Facility
+        Dr. Pradeep Kumar Srivastava
+      </h3>
+      <h4 class="text-center   ">
+        Ratanipur, Bhikhepur
+        Auraiya-206129
+        Uttra Pradesh India.
+      </h4>
+      <h4 class="text-center ">9450902994 &nbsp; 9872353594</h4>
+      <h4 class="text-center ">drpksoil@gmail.com</h4>
 
-      <div  class="section section-contacts">
+      <form #contactForm="ngForm" class="contact-form">
         <div class="row">
-          <div class="col-md-8 ml-auto mr-auto">
-            <h2 class="text-center title">Contact Us</h2>
-            <h3 class="text-center   ">
-              Research Facility 
-                Dr. Pradeep Kumar Srivastava
-              </h3 >
-              <h4 class="text-center   ">
-                  Ratanipur, Bhikhepur
-               Auraiya-206129
-               Uttra Pradesh India.
-              </h4>
-               <h4 class="text-center ">9450902994 &nbsp; 9872353594</h4>
-               <h4 class="text-center ">drpksoil@gmail.com</h4>
-
-            <form class="contact-form">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Your Name</label>
-                    <input type="email" class="form-control">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Your Email</label>
-                    <input type="email" class="form-control">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="exampleMessage" class="bmd-label-floating">Your Message</label>
-                <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>
-              </div>
-              <div class="row">
-                <div class="col-md-4 ml-auto mr-auto text-center">
-                  <button class="btn btn-primary btn-raised">
-                    Send Message
-                  </button>
-                </div>
-              </div>
-            </form>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="bmd-label-floating">Your Name</label>
+              <input type="text" [(ngModel)]="contact.name" name="name" required class="form-control">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="bmd-label-floating">Your Email</label>
+              <input type="email" [(ngModel)]="contact.email" name="email" required class="form-control">
+            </div>
           </div>
         </div>
-      </div>
+        <div class="form-group">
+          <label for="exampleMessage" class="bmd-label-floating">Your Message</label>
+          <textarea type="text" [(ngModel)]="contact.message" name="message" required class="form-control" rows="4" id="exampleMessage"></textarea>
+        </div>
+        <div class="row">
+          <div class="col-md-4 ml-auto mr-auto text-center">
+            <button class="btn btn-primary btn-raised" (click)="saveDetails(contactForm.value)" [disabled]="!contactForm.valid">
+              Send Message
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
