@@ -1,12 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FirebaseService } from 'src/app/firebase.service';
-import { FirebaseApp } from '@angular/fire';
-export class FormDetails {
-  name: string;
-  email: string;
-  contectNo: number;
-  message: string;
-}
+import { FormDetails } from 'src/app/providers/contactForm';
+
 
 @Component({
   selector: 'app-contact-us',
@@ -15,16 +10,26 @@ export class FormDetails {
 })
 export class ContactUsComponent implements OnInit {
   contact = new FormDetails();
-  constructor(private firbse: FirebaseService, @Inject(FirebaseApp) firebaseApp: any) { }
+  constructor(private firbse: FirebaseService) { }
 
   ngOnInit() {
   }
-  saveDetails(data) {
-    console.log(data);
+  uploadFile(event) {
+    this.firbse.upload(event);
+    // .then(function () {
 
-    this.firbse.db.collection('soilTech').add(Object.assign({}, data)).then(function () {
-      console.log('Document successfully written!');
-    }).then((details) => {
+    // }).then(() => {
+
+    // });
+  }
+
+
+  saveDetails() {
+    console.log(this.contact);
+
+    this.firbse.addClient(this.contact).then(function () {
+
+    }).then(() => {
       this.contact = new FormDetails();
     });
   }

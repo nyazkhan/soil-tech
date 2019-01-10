@@ -15,6 +15,7 @@
       <h4 class="text-center ">drpksoil@gmail.com</h4>
 
       <form #contactForm="ngForm" class="contact-form">
+
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
@@ -29,13 +30,29 @@
             </div>
           </div>
         </div>
+        <!-- <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Your img</label>
+                <input type="file" (change)="uploadFile($event)">
+
+                <input type="file" (click)="uploadFile($event)" name="img" [(ngModel)]="contact.img" required class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Your Email</label>
+                <input type="email" [(ngModel)]="contact.email" name="email" required class="form-control">
+              </div>
+            </div>
+          </div> -->
         <div class="form-group">
           <label for="exampleMessage" class="bmd-label-floating">Your Message</label>
           <textarea type="text" [(ngModel)]="contact.message" name="message" required class="form-control" rows="4" id="exampleMessage"></textarea>
         </div>
         <div class="row">
           <div class="col-md-4 ml-auto mr-auto text-center">
-            <button class="btn btn-primary btn-raised" (click)="saveDetails(contactForm.value)" [disabled]="!contactForm.valid">
+            <button class="btn btn-primary btn-raised" (click)="saveDetails()" [disabled]="!contactForm.valid">
               Send Message
             </button>
           </div>

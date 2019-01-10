@@ -1,3 +1,147 @@
-<p>
-  jounral works!
-</p>
+<div class="profile-page sidebar-collapse">
+
+  <div class="page-header " data-parallax="true" style="background-image: url('../assets/img/dashboard2.jpg');"></div>
+  <div class="main main-raised" >
+    <div class="profile-content">
+      <div class="container">
+        <div class="card card-nav-tabs card-plain">
+          <div class="card-header card-header-danger">
+            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+            <div class="nav-tabs-navigation">
+              <div class="nav-tabs-wrapper">
+                <ul class="nav nav-tabs" data-tabs="tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#home" data-toggle="tab">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#updates" data-toggle="tab">Updates</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#history" data-toggle="tab">History</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-body ">
+            <div class="tab-content text-center">
+              <div class="tab-pane active" id="home">
+                <div class="table-responsive">
+                  <table class="table table-condensed table-striped table-hover">
+                    <colgroup>
+                      <col width="10%">
+                      <col width="20%">
+                      <col width="20%">
+                      <col width="10%">
+                      <col width="10%">
+                      <col width="20%">
+                      <col width="10%">
+                    </colgroup>
+                    <thead class="text-primary">
+                      <tr>
+                        <!-- <th>Sr. No.</th> -->
+                        <th>EID</th>
+                        <th>Name</th>
+                        <th>Center</th>
+                        <th>Designation</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <!-- <th>Action</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="staff-list-row">
+                        <!-- <td>{{i+1}}</td> -->
+                        <td>staff.eid}}</td>
+                        <td>staff.name}}</td>
+                        <td>staff.centerName}}</td>
+                        <td>staff.designation}}</td>
+                        <td>staff.mobile}}</td>
+                        <td> <span> style="word-break: break-all;">.email</span></td>
+
+                      </tr>
+                      <tr class="text-center">
+                        <td colspan="8">No Staff to display</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="tab-pane" id="updates">
+                <!-- <form #contactForm="ngForm" class="contact-form">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="bmd-label-floating">Your Name</label>
+                              <input type="text" [(ngModel)]="contact.name" name="name" required class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="bmd-label-floating">Your Email</label>
+                              <input type="email" [(ngModel)]="contact.email" name="email" required class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleMessage" class="bmd-label-floating">Your Message</label>
+                          <textarea type="text" [(ngModel)]="contact.message" name="message" required class="form-control" rows="4" id="exampleMessage"></textarea>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4 ml-auto mr-auto text-center">
+                            <button class="btn btn-primary btn-raised" (click)="saveDetails(contactForm.value)" [disabled]="!contactForm.valid">
+                              Send Message
+                            </button>
+                          </div>
+                        </div>
+                      </form>   -->
+              </div>
+              <div class="tab-pane" id="history">
+                <div class="table-responsive">
+                  <table class="table table-condensed table-striped table-hover">
+                    <colgroup>
+                      <col width="10%">
+                      <col width="20%">
+                      <col width="20%">
+                      <col width="10%">
+                      <col width="10%">
+                      <col width="20%">
+                      <col width="10%">
+                    </colgroup>
+                    <thead class="text-primary">
+                      <tr>
+                        <!-- <th>Sr. No.</th> -->
+                        <th>EID</th>
+                        <th>Name</th>
+                        <th>Center</th>
+                        <th>Designation</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <!-- <th>Action</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="staff-list-row">
+                        <!-- <td>{{i+1}}</td> -->
+                        <td>staff.eid}}</td>
+                        <td>staff.name}}</td>
+                        <td>staff.centerName}}</td>
+                        <td>staff.designation}}</td>
+                        <td>staff.mobile}}</td>
+                        <td> <span> style="word-break: break-all;">.email</span></td>
+
+                      </tr>
+                      <tr class="text-center">
+                        <td colspan="8">No Staff to display</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -14,11 +14,11 @@ import { JounralComponent } from './jounral/jounral.component';
 import { GallaryComponent } from './gallary/gallary.component';
 import { FormsModule } from '@angular/forms';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireStorageModule, StorageBucket } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire';
-import { FirebaseService } from './firebase.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UploadComponent } from './upload/upload.component';
+import { LoginComponent } from './loginPage/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -39,6 +39,7 @@ const routes: Routes = [
     JounralComponent,
     GallaryComponent,
     UploadComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +52,8 @@ const routes: Routes = [
     AngularFireStorageModule ,
 
   ],
-  providers: [AngularFirestore, FirebaseService],
+  providers: [    AngularFirestore, { provide: StorageBucket, useValue: 'soiltech-org.appspot.com' }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
